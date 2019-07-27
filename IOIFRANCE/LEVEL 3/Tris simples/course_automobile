@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int n ;
+int t[1000];
+vector<pair<int,int>> v;
+bool verif ()
+{
+    bool test = true ;
+    for (int i=0; i<n-1&&test; i++)
+    {
+        if (t[i]>t[i+1])
+            test = false ;
+    }
+    return test ;
+}
+int main()
+{
+
+    cin>>n ;
+
+  //  short tt[1000][2];
+    for (int i=0; i<n; i++)
+    {
+        cin>>t[i];
+    }
+
+    int s=0;
+    while (!verif())
+    {
+        int i=n-1;
+        while (i>=1)
+        {
+            if (t[i]<t[i-1])
+            {
+                pair  <int,int> p;
+                p.first = t[i-1];
+                p.second = t[i];
+                v.push_back(p);
+              //  tt[s][0]=t[i-1];
+               // tt[s][1]=t[i] ;
+                s++;
+                swap(t[i],t[i-1]);
+            }
+            i--;
+        }
+
+
+    }
+    cout<<s<<endl ;
+    for (int j=0; j<s; j++)
+    {
+        cout<<v[j].first<<" "<<v[j].second<<endl ;
+    }
+
+}
+

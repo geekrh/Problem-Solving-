@@ -1,0 +1,16 @@
+#include <iostream>
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+using namespace std;
+
+int main()
+{
+    int n,a,b,c,d;
+    cin>>n;
+
+    for (int i=0;i<n;i++){
+    cin>>a>>b>>c>>d;
+    int s=c*d ; 
+    cout<<s+a<<endl;
+    }
+
+}

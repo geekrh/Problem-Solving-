@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    string ch,c ;
+    int n ;
+    cin>>ch ;
+
+    cin>>n ;
+    cin.ignore();
+
+    for (int i=0; i<n; i++)
+    {
+
+        getline(cin,c);
+
+        transform(c.begin(), c.end(), c.begin(), ::toupper);
+       //cout<<endl<<c<<endl;
+        int j=0;
+        int k=0;
+        string res ="";
+        while (j<ch.length() && ch[j]==c[k])
+        {
+
+                res+=ch[j];
+                k++;
+                j++;
+                while (k<c.length()&&c[k]!=' ')
+                {
+                    //cout<<endl<<k<<endl;
+                    res+=tolower(c[k]);
+                    k++;
+                }
+                if(j<ch.length())
+                {
+                    res+=" ";
+                    k++;
+                }
+
+        }
+
+        if (j==ch.length()&&k==c.length())
+            cout<<res<<endl ;
+
+    }
+
+

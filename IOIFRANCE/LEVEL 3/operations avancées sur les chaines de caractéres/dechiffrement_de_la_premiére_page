@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+map <char,char> m ;
+
+char a='a';
+string s ;
+getline(cin,s);
+for (int i=0;i<s.length();i++){
+    m[a]=s[i];
+    a++;
+}
+string ch;
+getline(cin,ch);
+for (int i=0;i<ch.length();i++){
+    if (ch[i]>='a'&&ch[i]<='z')
+        ch[i]=m[ch[i]];
+    else if (ch[i]>='A'&&ch[i]<='Z')
+        ch[i]=toupper(m[ch[i]+32]);
+}
+cout<<ch;
+}

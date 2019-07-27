@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+  
+int main()
+{
+   cout << "a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_" << endl;
+   cout << "b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_b_" << endl;
+   cout << "c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_c_" << endl;  
+}

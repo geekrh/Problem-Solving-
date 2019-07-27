@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    map <char , int > m ;
+    string ch ;
+    getline(cin,ch);
+    double d=0;
+
+    for (int i=0;i<ch.length();i++){
+        if (tolower(ch[i])>='a'&&tolower(ch[i]<='z')){
+        m[tolower(ch[i])]++;
+        d++;
+        }
+    }
+
+    for (char x ='a' ;x<='z';x++){
+        printf("%lf \n",m [x]/d);
+    }
+
+}
+

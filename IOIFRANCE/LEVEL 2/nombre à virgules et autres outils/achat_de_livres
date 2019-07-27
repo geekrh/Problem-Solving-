@@ -1,0 +1,14 @@
+#include <iostream>
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+#include <string>
+using namespace std;
+
+int main()
+{
+ int x,y;
+ cin>>x>>y;
+    int i = 0  ;
+    while (x-y>=0){x-=y;i++;}
+    cout<<i  ;
+
+}

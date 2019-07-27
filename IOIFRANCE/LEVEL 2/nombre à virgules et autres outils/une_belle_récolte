@@ -1,0 +1,15 @@
+#include <iostream>
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+#include <string>
+using namespace std;
+
+int main()
+{
+ int x,y;
+ cin>>x>>y;
+   if (y%x==0)
+    cout<<"oui" ;
+    else
+    cout<<"non";
+
+}

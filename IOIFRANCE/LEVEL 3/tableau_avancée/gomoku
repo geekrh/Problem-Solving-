@@ -1,0 +1,83 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int n ;
+int t[10000][10000];
+int verifr(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifr(i,j+1,e);
+}
+int verifl(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifl(i,j-1,e);
+}
+
+int verifT(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifT(i-1,j,e);
+}
+int verifB(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifB(i+1,j,e);
+}
+int verifdt(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifdt(i+1,j+1,e);
+}
+int verifdb(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifdb(i-1,j-1,e);
+}
+int verifdd(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+return 1+verifdd(i+1,j-1,e);
+}
+int verifddd(int i,int j,int e){
+if (i>=n||i<0||j>=n||j<0||t[i][j]!=e)
+    return 0 ;
+else return 1+verifddd(i-1,j+1,e);
+}
+
+
+
+
+int main()
+{
+
+cin>>n ;
+
+//bool v[n][n] ;
+
+for (int i=0;i<n;i++){
+    for (int j=0;j<n;j++){
+        cin>>t[i][j];
+  //      v[i][j]=false ;
+    }
+}
+
+
+bool test= false;
+for (int i=0;i<n&&test==false;i++){
+    for (int j=0;j<n&&test==false;j++){
+
+        if (t[i][j]!=0){
+            if (((verifl(i,j,t[i][j])+verifr(i,j,t[i][j]))>=6)||((verifdb(i,j,t[i][j])+verifdt(i,j,t[i][j]))>=6)||((verifdd(i,j,t[i][j])+verifddd(i,j,t[i][j]))>=6)||((verifT(i,j,t[i][j])+verifB(i,j,t[i][j]))>=6)){
+                cout<<t[i][j];
+                test = true ;
+            }
+        }
+    }
+}
+if (!test)
+cout<<0;
+
+
+
+}

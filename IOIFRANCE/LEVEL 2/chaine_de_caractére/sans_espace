@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+
+using namespace std ; 
+
+int main(){
+
+string ch ; 
+getline(cin,ch) ; 
+for (int i=0;i<ch.length();i++)
+{if (ch[i]==' ')ch[i]='_';}
+
+cout<<ch ; 

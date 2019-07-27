@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+
+using namespace std  ;
+
+
+int main(){
+
+string ch, s;
+cin>>s;
+cin.ignore();
+getline(cin,ch);
+int n =0 ;
+for (int i=0;i<ch.length();i++) {
+   if (toupper(ch[i])==toupper(s[0]))
+   {
+
+      int j=i+1;
+      int x=1;
+      while (toupper(ch[j])==toupper(s[x])&&x<s.length()&&j<ch.length()){j++;x++;}
+      if (x==s.length())
+        n++;
+   }
+
+}
+cout<<n;
+}

@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+
+using namespace std ;
+
+int main()
+{
+string ch , ch2;
+cin>>ch>>ch2;
+
+int i =0 , j=0 ;
+int eg =0 ;
+bool test = true ;
+while (i<ch.length()&&j<ch2.length()&& test ){
+    if (ch[i]==ch2[j])
+    {
+       // cout<<eg<<endl ;
+        i++;j++;eg++;
+    }
+    else if (ch[i]<ch2[j])
+    {i++;test=false ;}
+    else {j++;test=false;}
+}
+
+if(i==j&&ch.length()==ch2.length())
+    cout<<"="<<endl ;
+else if (i==j && ch.length()>ch2.length())
+         cout<<"1"<<endl;
+else if (i==j && ch.length()<ch2.length())
+    cout<<"2"<<endl ;
+else if (i>j)
+    cout<<"1"<<endl ;
+else
+    cout<<"2"<<endl ;
+cout<<eg ;
+
+}

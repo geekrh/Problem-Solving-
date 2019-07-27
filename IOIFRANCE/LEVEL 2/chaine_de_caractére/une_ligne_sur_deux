@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+
+using namespace std ;
+
+int main()
+{
+    unsigned int n ;
+    cin>>n ;
+    cin.ignore();
+    for (int i=1;i<=n;i++){
+        string ch ;
+        getline(cin,ch);
+        if (i%2==1){cout<<ch<<endl;}
+    }
+}

@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+
+using namespace std ;
+
+int main()
+{
+    unsigned int n ;
+    cin>>n ;
+    cin.ignore();
+    unsigned int x=0;
+    for (int i=1; i<=n; i++)
+    {
+        string ch,ch2="" ;
+        getline(cin,ch);
+       for (int j=ch.length()-1;j>=0;j--)
+        ch2=ch2+ch[j];
+       cout<<ch2<<endl;
+    }
+}

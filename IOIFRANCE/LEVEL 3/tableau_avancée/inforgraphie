@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int n ;
+vector<int> v;
+
+int main()
+{
+    int n,m ;
+
+    int e ;
+    cin>>n>>m>>e;
+    char t[n][m];
+    for (int i=0;i<n;i++){
+        for (int j=0;j<m;j++){
+            t[i][j]='.';
+        }
+    }
+    for (int x=0;x<e;x++){
+        int a,b,c,d;
+        char l;
+        cin>>a>>b>>c>>d>>l;
+
+        for (int i=a;i<=c;i++){
+            for (int j=b;j<=d;j++){
+                t[i][j]=l;
+            }
+        }
+
+    }
+
+    for (int i=0;i<n;i++){
+        for (int j=0;j<m;j++){
+            cout<<t[i][j];
+        }
+        cout<<endl ;
+    }
+
+}

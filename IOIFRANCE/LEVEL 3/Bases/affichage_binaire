@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+ int n ;
+ cin>>n ;
+if (n==0){cout<<"0";}else {
+ string ch="" ;
+
+     while (n!=0){ch=to_string(n%2)+ch;n=n/2;}
+     cout<<ch;
+ }
+
+ }

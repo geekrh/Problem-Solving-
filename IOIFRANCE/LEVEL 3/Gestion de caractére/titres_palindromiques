@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n ;
+    cin>>n ;
+    cin.ignore();
+    for (int i=0;i<n;i++){
+        string ch ,ch1="";
+        getline(cin,ch);
+        string ch2="";
+        for (int x=0;x<ch.length();x++){
+        if (ch [x]!= ' '){
+            ch1=ch1+(char)tolower(ch[x]);
+            ch2=(char)tolower(ch[x])+ch2;
+            }
+        }
+        if (ch2==ch1)
+            cout<<ch<<endl;
+    }
+}

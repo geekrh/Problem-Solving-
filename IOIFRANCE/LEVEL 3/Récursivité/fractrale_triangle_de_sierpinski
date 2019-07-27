@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+
+using namespace std ;
+int n ;
+char c [64][64];
+
+void affiche(){
+int x=n ;
+for (int i=0;i<n;i++){
+    for (int j=0;j<x;j++){
+        if (c[i][j]!='#')
+            cout<<" ";
+        else
+            cout<<c[i][j];
+    }
+    cout<<endl ;
+    x--;
+}
+
+}
+
+void draw(int a,int b)
+{
+
+    if (a==b)
+        return ;
+    for (int i=0;i<a;i++){
+        for (int j=0;j<a;j++){
+            if (c[i][j]=='#')
+                {c[i][j+a]='#';c[i+a][j]='#';}
+        }
+    }
+    draw(a*2,n);
+
+
+}
+
+
+int main(){
+    cin>>n ;
+    c[0][0]='#';
+   // c[0][1]='#';
+    //c[1][0]='#';
+
+    draw(1,n);
+    affiche();
+
+ }

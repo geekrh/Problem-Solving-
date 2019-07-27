@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+   map<int,int> m ;
+   int n ;
+   cin>>n ;
+   bool test = true ;
+   for (int i=1;i<=n;i++){
+    int x;
+    cin>>x;
+    m[x]++;
+    if (test&&m[x]>1)
+        {cout<<x;test= false ; }
+   }
+   if (test)
+    cout<<-1;
+}

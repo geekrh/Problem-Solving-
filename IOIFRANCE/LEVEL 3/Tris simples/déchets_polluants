@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main()
+{
+int n , m ;
+cin>>n >> m ;
+
+int t[n];
+
+for (int i=0;i<n;i++){
+cin>>t[i];
+}
+while (m>0){
+int i=-1;
+int mn=-1;
+for (int j=0;j<n;j++){
+if (t[j]>mn){
+mn=t[j];
+i=j;
+}
+
+}
+t[i]=-1;
+cout<<mn<<" ";
+m--;
+
+}
+
+}
+

@@ -1,0 +1,24 @@
+
+#include <bits/stdc++.h>
+using namespace std ;
+void hanoi(int  dep, int dest, int temp, int n)
+{
+   if(n==1)
+   {
+      cout << dep << " -> " << dest << endl;
+   }
+   else
+   {
+      hanoi( dep, temp, dest, n-1); 
+      hanoi( dep, dest, temp, 1);   
+      hanoi(temp, dest,  dep, n-1); 
+   }
+}
+
+int main()
+{
+   int nb ; 
+   cin>>nb  ; 
+   hanoi( 1,3,2,nb);
+                return 0;
+}

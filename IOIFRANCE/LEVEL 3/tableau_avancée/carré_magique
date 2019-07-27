@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+map< int , int > m ;
+int n ;
+cin>>n ;
+int t[n][n];
+bool test = true ;
+for (int i=0;i<n;i++){
+    for (int j=0;j<n;j++){
+        int x;
+        cin>>x;
+        m[x]++;
+         if (x<1||x>n*n)
+            test=false ;
+        if (m[x]>1)
+            test=false ;
+        t[i][j]=x;
+    }
+}
+if (test){
+    int s=0;
+    int d=0;
+    int dd=0;
+    int c=0;
+    for (int i=0;i<n;i++){
+        s+=t[0][i] ;
+        d+=t[i][i] ;
+        dd+=t[i][n-1-i];
+        c+=t[i][0];
+
+    }
+    for (int i=1;i<n&&test;i++){
+    int e=0;
+        for (int j=0;j<n;j++){
+            e+=t[i][j];
+        }
+        if (e!=s)
+            test=false ;
+    }
+    for (int i=1;i<n&&test;i++){
+    int e=0;
+        for (int j=0;j<n;j++){
+            e+=t[j][i];
+        }
+        if (e!=c)
+            test=false ;
+    }
+    if (c!=d||d!=dd||c!=s)
+    test=false ;
+
+    if (test)
+    cout<<"yes";
+    else
+    cout<<"no";
+
+}
+else
+cout<<"no";
+}

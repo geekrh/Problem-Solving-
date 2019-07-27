@@ -1,0 +1,28 @@
+#include <iostream>
+#include "robot.h"
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+using namespace std;
+
+int main()
+{
+   int i=0;
+
+   for (int j=0;j<20;j++) {
+    
+   ramasser();
+   while (i<15)
+   {
+       droite();
+       i++;
+   }
+    
+   deposer();
+   while (i>0)
+   {
+       gauche();
+       i--;
+   }
+
+
+   }
+}

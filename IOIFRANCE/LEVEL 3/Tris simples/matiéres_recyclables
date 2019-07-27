@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+bool compare(const pair<int, int>&i, const pair<int, int>&j)
+{
+    return i.second < j.second;
+}
+int main()
+{
+vector<string>v ;
+int n ;
+cin>>n ;
+
+for (int i=0;i<n;i++){
+string ch;
+cin>>ch ;
+v.push_back(ch);
+}
+
+sort (v.begin(),v.end());
+
+for (int i=0;i<n;i++){
+cout<<v[i]<<endl ;
+}
+
+}
+

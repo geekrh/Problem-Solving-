@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+string affiche(string ch,int i){
+if (i==0)
+{return ch;}
+ch="("+ch+" + "+ch+")";
+i=i-1;
+return affiche(ch,i);
+}
+int main()
+{
+  int i ;
+  cin>>i ;
+  cout<<"0 = "+affiche("0",i);
+}

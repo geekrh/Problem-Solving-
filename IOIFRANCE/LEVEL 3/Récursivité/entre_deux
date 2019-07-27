@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void affiche (int n,int m ){
+if (n>m)
+return ;
+cout<<n<<" ";
+affiche(n+1,m);
+}
+int main()
+{
+    int n , m ;
+    cin>>n>>m ;
+    affiche(n,m);
+}

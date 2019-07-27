@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void affiche (string ch , int n  ){
+if (n<0)
+return ;
+cout<<ch[n];
+affiche(ch,n-1);
+}
+int main()
+{
+    int n  ;
+    string ch ;
+    getline(cin,ch);
+    affiche(ch,ch.length()-1);
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+#include <string>
+using namespace std;
+
+int main()
+{
+  double x,y,z,w;
+  cin>>x>>y>>z;
+ y+=100;
+ x+=100;
+  w =z*y;
+  printf("%.2f",w/x);
+
+
+
+}

@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+using namespace std ;
+
+int main()
+{
+    unsigned int n ;
+    cin>>n ;
+    cin.ignore();
+    unsigned int x=0;
+    for (int i=1; i<=n; i++)
+    {
+        string ch ;
+        getline(cin,ch);
+        if (x < ch.length() )
+        {
+            cout<<ch<<endl ;
+
+            x=ch.length();
+        }
+    }
+}
+

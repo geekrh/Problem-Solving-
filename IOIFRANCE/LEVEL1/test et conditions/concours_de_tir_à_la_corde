@@ -1,0 +1,26 @@
+#include <iostream>
+#define repeat(nb) for (int _loop = 1, _max = (nb) ; _loop <= _max ; _loop++)
+#include <string>
+using namespace std;
+
+int main()
+{
+  int n,x=0,y=0 ;
+  cin>>n ;
+
+
+  for(int i=0;i<n;i++){
+    int a,b;
+    cin>>a>>b;
+    x+=a;
+    y+=b;
+  }
+  if (x>y)
+    cout<<"L'équipe 1 a un avantage"<<endl;
+  else
+    cout<<"L'équipe 2 a un avantage"<<endl;
+  cout<<"Poids total pour l'équipe 1 : "<<x<<endl<<"Poids total pour l'équipe 2 : "<<y;
+
+}
+
+
